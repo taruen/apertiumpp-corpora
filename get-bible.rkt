@@ -149,6 +149,6 @@
                   '("cat" "eng" "fra" "ita" "kaa" "lin" "por"
 		    "por_pt" "tat" "tur" "uig_cyr" "uzn" "lzh"
 		    "amh" "asm" "ben" "bod" "caf" "cat" "chr"
-		    "guj" "ike" "ium" "kan" "lao" "lin" "lzh"
+		    "guj" "hak" "ike" "ium" "kan" "lao" "lin" "lzh"
 		    "mal" "mar" "nwx" "pan" "por" "por_pt" "sin"
 		    "tel"))))
