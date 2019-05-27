@@ -25,10 +25,11 @@
 ;; store each translation in the [lang] directory, one verse per line
 (define (main langs)
   (for ([lang langs])
-    (make-directory lang)
-    (for ([version (versions lang)])
-      (define outf (string-append lang "/" (id version) ".csv"))
-      (dump-to-file (verses version) outf))))
+    (with-handlers ([exn:fail:contract? (lambda (exn) (string-append "Error occured while processing: " lang))])
+      (make-directory lang)
+      (for ([version (versions lang)])
+        (define outf (string-append lang "/" (id version) ".csv"))
+        (dump-to-file (verses version) outf)))))
 
 ;; String -> (listof String)
 ;; given LANGS-PAGE, return language codes for which
@@ -143,5 +144,7 @@
          out)))))
 
 (module+ main
-  (main '("por" "por_pt"
-          "tur" "uig_cyr" "kaa" "tat")))
+  (main
+    (set-subtract (langs LANGS-PAGE)
+                  '("cat" "eng" "fra" "ita" "kaa" "lin" "por"
+		    "por_pt" "tat" "tur" "uig_cyr" "uzn" "lzh"))))
