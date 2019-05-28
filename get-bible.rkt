@@ -12,7 +12,7 @@
 (define LANGS-PAGE (string-append ROOT "/languages"))
 (define REQUEST-HEADERS
   '("User-agent: Mozilla/5.0 (compatible; Taruenbot/0.1; +http://taruen.com/apertiumpp/)"))
-(define SLEEP 1) ;; second(s) between requests
+(define SLEEP 0) ;; second(s) between requests
 
 (struct verse (id content) #:transparent)
 ;; a Verse is (verse String String)
@@ -151,4 +151,5 @@
 		    "amh" "asm" "ben" "bod" "caf" "cat" "chr"
 		    "guj" "hak" "ike" "ium" "kan" "lao" "lin" "lzh"
 		    "mal" "mar" "nwx" "pan" "por" "por_pt" "sin"
-		    "tel"))))
+		    "tel"
+                    "nep" "taj" "suz"))))
