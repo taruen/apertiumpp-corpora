@@ -143,13 +143,6 @@
          (string-append (verse-id v) "\t" (verse-content v) "\n")
          out)))))
 
-(module+ main
-  (main
-    (set-subtract (langs LANGS-PAGE)
-                  '("cat" "eng" "fra" "ita" "kaa" "lin" "por"
-		    "por_pt" "tat" "tur" "uig_cyr" "uzn" "lzh"
-		    "amh" "asm" "ben" "bod" "caf" "cat" "chr"
-		    "guj" "hak" "ike" "ium" "kan" "lao" "lin" "lzh"
-		    "mal" "mar" "nwx" "pan" "por" "por_pt" "sin"
-		    "tel"
-                    "nep" "taj" "suz"))))
+;(module+ main
+;  (main
+;    '("ita" "lzh" "hak" "mai")))
